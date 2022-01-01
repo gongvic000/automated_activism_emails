@@ -3,10 +3,7 @@
 import random
 
 """
-    Template credit: nomoreracistcops.github.io
-    Additional demands from:
-    https://secure.everyaction.com/eR7GA7oz70GL8doBq19LrA2
-    https://docs.google.com/document/d/1V2l7bdg6QeqtqVWDr5HFzVzieiT0vg6jZASN6syBNyY/edit
+
 """
 
 
