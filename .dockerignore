@@ -1,0 +1,9 @@
+__pycache__
+.git
+.gitignore
+Dockerfile
+example.txt
+exec-docker
+install-osx-python3
+README.md
+tests
