@@ -1,14 +1,13 @@
-# Activism Mailbot
+# Activism Emails
 
 In light of recent events, I have created this Python script to send emails to a list of 542 elected US officials.
 
-The script sends a **unique message to each lawmaker** by varying sentence structures and switching out nouns, verbs, adverbs, and adjectives with synonyms. Each email is constructed to roughly follow the template from [nomoreracistcops.github.io](https://nomoreracistcops.github.io/). Please report bugs to alandgton@gmail.com!
+The script sends a **unique message to each lawmaker** by varying sentence structures and switching out nouns, verbs, adverbs, and adjectives with synonyms. 
 
 **This script only works for gmail accounts.** 
 
 NOTE: there is a per-minute limit on SMTP messages sent via google's servers. to appease our corporate overlords, i've decreased the speed of our operations.
 
-If you're going to use this tool in one of your projects, I'm hoping that you'll have enough self-respect to give credit where it is due. **Please do not monetize this script.** Thanks!!
 
 ## Setup
 1. Download the source code
@@ -28,7 +27,7 @@ If you're going to use this tool in one of your projects, I'm hoping that you'll
 
 ## Running the script
 - Option 1: Use Docker (**RECOMMENDED**)
-	- Shoutout to [darrylbalderas](https://github.com/darrylbalderas) for setting this up!
+	- Shoutout to Darry Balderas for setting this up!
 	- Install docker-engine
     	- [Mac or Windows](https://docs.docker.com/engine/install/) (Catalina, Mojave, or High Sierra; Windows 10 Pro, Enterprise, or Education)
     	    - For older Mac and Windows systems install [Docker Toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/)
@@ -89,28 +88,9 @@ If you're going to use this tool in one of your projects, I'm hoping that you'll
 ## Final Steps
 
 - Please add more recipients!
-	- [Use this Google Form](https://forms.gle/Duy52iF4i5kvyb9K8) or add to `recipients.py` and submit a pull request
+	- [Use this Google Form](https://forms.gle/cm2Ayjs4mguQ77uK9) or add to `recipients.py` and submit a pull request
 - thank you for your time, we did some good work :^)
 - activism++
 - **Please remember to switch `Allow less secure apps` to OFF.**
 
-## Footnote
 
-This is a critical time for the rights and freedoms that we cherish as American citizens. Check out this <a href="https://www.notion.so/Activism-Resources-and-Notes-5e095c3bc65845c8993598194bccfc1b" target="_blank">compilation of activism resources and notes</a> (credit: Jemma Kwak)!
-
-Listed below are organizations gladly accepting donations and petitions to sign.
-- Organizations:
-	- [List of Bail Funds](https://bailfunds.github.io/)
-	- [Reclaim the Block](https://www.reclaimtheblock.org/)
-	- [Official George Floyd Memorial Fund](https://www.gofundme.com/f/georgefloyd)
-	- [Black Visions Collective](https://www.blackvisionsmn.org/)
-	- [Minnesota Freedom Fund](https://minnesotafreedomfund.org/)
-	- [Campaign Zero](https://www.joincampaignzero.org/)
-	- [National Bail Out](http://nationalbailout.org/)
-- Petitions
-	- [Checkout this petition signing bot my friend Eshani Mehta created!](https://github.com/eshanim/petition-signer?fbclid=IwAR2Fk_KLWN_D19jFysGy_nJm00hnPp4aV1HNnx84aqW1VN-lVJEosSPZGfs)
-	- [Justice for George Floyd (1)](https://www.change.org/p/federal-bureau-of-investigation-justice-for-george-floyd)
-	- [Justice for George Floyd (2)](https://www.change.org/p/andy-beshear-justice-for-breonna-taylor)
-	- [Justice for Breonna Taylor](https://www.change.org/p/andy-beshear-justice-for-breonna-taylor)
-	- [Justice for Tony McDade](https://www.change.org/p/black-lives-matter-activists-justice-for-tony-mcdade)
-	- [#DefundThePolice](https://blacklivesmatter.com/defundthepolice/)
