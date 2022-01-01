@@ -6,7 +6,7 @@
 mailing_list = {
     "Alabama" : {
             "Birmingham" : [
-                ( "Councilor Clinton P. Woods", "Birmingham", "clinton.woods@birminghamal.gov"),
+                ( "Councilor Jerry Gong", "Birmingham", "clinton.woods@birminghamal.gov"),
                 ( "Councilor Hunter Williams", "Birmingham", "hunter.williams@birminghamal.gov"),
                 ( "Councilor Valerie A. Abbott", "Birmingham", "valerie.abbott@birminghamal.gov"),
                 ( "Councilor William Parker", "Birmingham", "william.parker@birminghamal.gov"),
