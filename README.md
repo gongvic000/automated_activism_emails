@@ -1,6 +1,6 @@
 # Activism Emails
 
-In light the of China's treatment towards Uyghur Muslim, it is imperative that we push more more than a dimplomatic boycott, but a postponement, relocation or athlete boycott. 
+In light the of China's treatment towards Uyghur Muslim, it is imperative that we push more more than a diplomatic boycott, but genuine intervention. 
 
 The script sends a **unique message to each lawmaker** by varying sentence structures and switching out nouns, verbs, adverbs, and adjectives with synonyms. 
 
