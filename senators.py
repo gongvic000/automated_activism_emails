@@ -1,5 +1,6 @@
 # If you would like to add to this list, please let me know at victoriagong22@gmail.com
-# Every Senator
+# Every Senator 
+# In process of adding more politcal members
 # Credit - http://hrlibrary.umn.edu/peace/senate.html
 
 # a dictionary that maps states to dictionaries that map states to contacts

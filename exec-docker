@@ -1,4 +1,4 @@
-#!/bin/bash
+#upload docker
 
 docker build -t activism-mailbot .
 

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import messages, senators, smtplib, ssl, states, sys, time
 from getpass import getpass
 from email.message import EmailMessage

@@ -6,15 +6,10 @@ The script sends a **unique message to each lawmaker** by varying sentence struc
 
 **This script only works for gmail accounts.** 
 
-NOTE: there is a per-minute limit on SMTP messages sent via google's servers. to appease our corporate overlords, i've decreased the speed of our operations.
-
-
 ## Setup
 1. Download the source code
-	- Option 1: click the green "Clone or download" button on the upper-right, then "Download ZIP"
-		- Then, decompress the files somewhere on your computer
-	- Option 2: `git clone https://github.com/alandgton/activism-mail-bot.git`
-		- Requires: a Github account, a terminal, and git installation
+	- Click the green "Clone or download" button on the upper-right, then "Download ZIP"
+	- Then, decompress the files somewhere on your computer
 
 2. Temporarily grant mailbot permission to send emails on your behalf
 	- Turn [_Allow less secure apps_  to  _ON_](https://myaccount.google.com/lesssecureapps) for your gmail account.
@@ -54,14 +49,13 @@ NOTE: there is a per-minute limit on SMTP messages sent via google's servers. to
 		
 ## How to use mailbot
 
-1. Choose which officials you would like to send emails to
-	- Enter the number corresponding to the state/city/county of your choice
-		- Enter 0 to Select All (current total: 542 recipients)
+1. Choose which state senators you would like to send emails to
+	- Enter the number corresponding to the state of your choice
+		- Enter 0 to Select all 100 senators
 	- Enter blank (nothing) when finished selecting
-	- NOTE: some city councilmembers may ask for your address to confirm that you are their constituent
-	
+
 2. Enter the subject (title) of your emails.
-	- If blank, mailbot will randomly generate a spicy title for you
+	- If you leave it blank, the script wil automatically create one 
 
 3. Would you like to write your own email or have mailbot do it for you?
 	- If you want mailbot to write the emails, answer `y`.
@@ -77,14 +71,12 @@ NOTE: there is a per-minute limit on SMTP messages sent via google's servers. to
 5. Enter your gmail
 
 6. Enter your gmail password
-	- i'm not logging this anywhere or anything, feel free to look at my code if you're paranoid
+	- This code will not save your information! Do not worry!!
 	
 ## Final Steps
 
-- Please add more recipients!
+- I will be in the process of updating the recipients list to one day include representatives as well
 	- [Use this Google Form](https://forms.gle/cm2Ayjs4mguQ77uK9) or add to `recipients.py` and submit a pull request
-- thank you for your time, we did some good work :^)
-- activism++
 - **Please remember to switch `Allow less secure apps` to OFF.**
 
 
