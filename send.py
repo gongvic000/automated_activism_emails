@@ -75,7 +75,33 @@ def prompt_recipients():
         elif int(state_idx) in state_options.keys():
             state = state_options[int(state_idx)]
             subcart = set()
+        # Choose a senator
+            while True:
+                city_options = { v:k for v,k in enumerate(senators.get_cities(state)) }
+                print_success()
+                print("Which officials do you want to send emails to?")
+                if subcart: print(f'Cities chosen: {subcart}\n')
+                for idx, opt in city_options.items():
+                    print(idx, "->", opt)
+                print("Enter blank (nothing) when done.")
+                city_idx = input("\nType the number corresponding to the city here: ")
         
+                if not city_idx:
+                    break
+                elif int(city_idx) == 0:
+                    subcart.update(senators.get_cities(state))
+                    subcart.remove('Select All')
+                    recv.update(senators.get_state(state))
+                    break
+                elif int(city_idx) in city_options.keys():
+                    subcart.add(city_options[int(city_idx)])
+                    recv.update(senators.get_city(state, city_options[int(city_idx)]))
+                else:
+                    print("Invalid index")
+            # Add (city, state) to cart)
+            for city in subcart:
+                cart.add("%s, %s" % (city, states.abbreviate(state)))
+            print_success()
         else:
             print("Invalid index")
     print_success()
