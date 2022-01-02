@@ -1,4 +1,5 @@
 #state name : abbreviation
+# Add DC
 state_abbrev = {
     'Alabama': 'AL',
     'Alaska': 'AK',
