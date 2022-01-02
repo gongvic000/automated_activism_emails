@@ -123,7 +123,7 @@ smtp_server = "smtp.gmail.com"
 send = 0
 recv = prompt_recipients()
 subject, message = prompt_email()
-src_name, src_email, password = prompt_login()
+sender_name, sender_email, password = prompt_login()
 
 while True:
     try:
@@ -131,20 +131,20 @@ while True:
         context = ssl.create_default_context()
 
         with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-            server.login(src_email, password)
+            server.login(sender_email, password)
             while recv:
                 recipient = recv.pop()
-                dst_name = recipient[0]
-                location = recipient[1]
-                dst_email = recipient[2]
+                senator_name = recipient[0]
+                state = recipient[1]
+                senator_email = recipient[2]
 
                 msg = EmailMessage()
 
-                msg['Subject'] = subject if subject else messages.gen_subject()
-                msg['From'] = src_email
-                msg['To'] = dst_email
+                msg['Subject'] = subject if subject else messages.line_subject()
+                msg['From'] = sender_email
+                msg['To'] = senator_email
 
-                body = messages.attach_greeting(dst_name, message) if message else messages.gen_body(src_name, dst_name, location)
+                body = messages.attach_greeting(senator_name, message) if message else messages.body_text(sender_name, senator_name, state)
                 msg.set_content(body)
                 print(msg.as_string())
 
@@ -152,6 +152,8 @@ while True:
                 send += 1
         break
     except smtplib.SMTPException:
+
+
         print("Unexpected error... trying again in 10 seconds.")
         time.sleep(10)
 
