@@ -55,7 +55,7 @@ def prompt_recipients():
     # Choose a state
     while True:
         print_success()
-        print("Which state senators do you want to send emails to?")
+        print("Select 0 to send your message to the state senators of your selected state")
         if cart: print(f'States chosen: {cart}\n')
         state_options = { v:k for v,k in enumerate(senators.get_states()) }
         for idx, opt in state_options.items():

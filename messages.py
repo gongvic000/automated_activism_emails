@@ -16,22 +16,22 @@ def line_subject(): #note can this function be used later if its part of the app
 	s = ["Human Rights Inquiry","Thoughts of a Concerned Citizen","In Light of Recent Human Rights Abuses", "A Genocide Unraveling", "Time for Change", "Boycott is the First Step", "Stand up for Uyghur", "Take a Stand Against Human Genocide", "A Second Holocaust", "Ethnic Cleansing"]
 	return random.choice(s)
 
-# Randomly generates the body of the email, follows structure of template and swaps out select words/phrases
+# Randomly cretes mail content follwing a template with different phrases
 def body_text(sender_name, senator_name, state):
-	return f'{recipiant_greeting(senator_name)}\t{gen_intro(state)}\n\t{gen_curiosity()}\n\t{gen_conclusion(sender_name)}'
+	return f'{recipiant_greeting(senator_name)}\t{introduction(state)}\n\t{gen_curiosity()}\n\t{gen_conclusion(sender_name)}'
 
 # Generates the greeting to the recipient of the email
 def recipiant_greeting(person):
 	s = ["Dear", "Hello", "Greetings", "Hi"]
 	return f'{random.choice(s)} {person},\n\n'
 
-# Prepends greeting statement to a user-generated message
-def attach_greeting(person, body):
-	s = ["Dear", "Hello", "Greetings", "Hi"]
-	return f'{random.choice(s)} {person},\n\n{body}'
+# # Greeting statement to whom the email is directed to
+# def member_greeting(person, body):
+# 	s = ["Dear", "Hello", "Greetings", "Hi"]
+# 	return f'{random.choice(s)} {person},\n\n{body}'
 
 # First sentence in email.
-def gen_intro(state):
+def introduction(state):
 	disaster = ["a catastrophe" "an inconceivable mess" "in shambles", "horrific" "a horrific siutation" "disgusting", "a disaster", "a mess"]
 	subject = ["As a human", "I beleive that everyon deserve to be treated as an equal","As a concerned American,"]
 	contact = ["getting in touch", "reaching out to you", "contacting you", "sending you this message"]
