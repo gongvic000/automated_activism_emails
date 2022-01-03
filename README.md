@@ -1,4 +1,4 @@
-# Activism Emails
+# Make a Difference Today!
 
 In light the of China's treatment towards Uyghur Muslim, it is imperative that we push more more than a diplomatic boycott, but genuine intervention. 
 
@@ -73,7 +73,7 @@ The script sends a **unique message to each lawmaker** by varying sentence struc
 6. Enter your gmail password
 	- This code will not save your information! Do not worry!!
 	
-## Final Steps
+## Notes
 
 - I will be in the process of updating the recipients list to one day include representatives as well
 	- [Use this Google Form](https://forms.gle/cm2Ayjs4mguQ77uK9) or add to `recipients.py` and submit a pull request
