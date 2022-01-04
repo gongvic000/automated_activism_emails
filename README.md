@@ -22,9 +22,8 @@ The script sends a **unique message to each lawmaker** by varying sentence struc
 
 ## Running the script
 Shoutout to Darry for helping me set this up!
-
 	- Install docker-engine
-    	- [Mac or Windows](https://docs.docker.com/engine/install/) (Catalina, Mojave, or High Sierra; Windows 10 Pro, Enterprise, or Education)
+    		- [Mac or Windows](https://docs.docker.com/engine/install/) (Catalina, Mojave, or High Sierra; Windows 10 Pro, Enterprise, or Education)
 	- Run application: `python send.py`
 
 ## How to use my program
