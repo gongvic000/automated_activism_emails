@@ -1,9 +1,6 @@
 # If you would like to add to this list, please let me know at victoriagong22@gmail.com
 # Every Senator
-# Credit - http://hrlibrary.umn.edu/peace/senate.html
-
-# a dictionary that maps states to dictionaries that map states to contacts
-# contacts are tuples (name, state, email)
+#used for testing
 mailing_list = {
     "Alaska" : {
             "Alaska" : [
