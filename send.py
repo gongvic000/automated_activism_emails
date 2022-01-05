@@ -1,39 +1,38 @@
-import messages, senators, smtplib, ssl, states, sys, time
-from getpass import getpass
+import senators, smtplib, messages, ssl, states, sys, time
 from email.message import EmailMessage
+from getpass import getpass
 
 def print_success():
-    print("======================================================")
+    print("==================================================================")
 
 def login():
     print_success()
-    name = ""
+    sender_name = ""
     while True:
-        if not name:
-            name = input("Type your name and press enter: ")
+        if not sender_name:
+            sender_name = input("Type in your name then press enter: ")
         else:
             break
-
-    email = input("Type your gmail and press enter: ")
-    password = getpass("Type your password and press enter: ")
+    email = input("Type in your gmail then press enter: ")
+    password = getpass("Type in your password then press enter: ")
     print_success()
-    return name, email, password
+    return sender_name, email, password
 
 
 
 def prepare_email():
     print_success()
     print("\nWhat would you like the subject (title) of your email to be?\n")
-    subject = input("Type here and press enter (if blank, the program will generate one for you): ")
+    title_subject = input("Type here and press enter (if blank, the program will generate one for you): ")
     print_success()
     print("\nThis program creates unique and personalized emails to Senators.")
     print("However, if you would like to write your own message, please save it in a .txt file. The easiest way to do this is to just write your message in example.txt.\n")
     while True:
-        response = input("Would you like mailbot to write emails for you? (y/n): ")
+        response = input("Would you like the program to write emails for you? Each email will be unique. (y/n): ")
         if response == 'n':
             while True:
-                filename = input("What is the name of your txt file?: ")
-                with open(filename, 'r', encoding = 'utf-8-sig') as fd:
+                file = input("What is the name of your txt file?: ")
+                with open(file, 'r', encoding = 'utf-8-sig') as fd:
                     message = fd.read()
                 break
             break
@@ -43,10 +42,10 @@ def prepare_email():
         else:
             print("Please answer with y or n.")
     
-    return subject, message
+    return title_subject, message
 
 
-def prompt_recipients():
+def select_recipients():
     receive = set()
     selected = set()
 
@@ -115,9 +114,9 @@ port = 465 # standard port for SMTP over SSL
 smtp_server = "smtp.gmail.com"
 
 send = 0
-receive = prompt_recipients()
-subject, message = prepare_email()
-sender_name, sender_email, password = long()
+receive = select_recipients()
+title_subject, message = prepare_email()
+sender_name, sender_email, password = login()
 while True:
     try:
         # create a secure SSL context
@@ -133,7 +132,7 @@ while True:
 
                 msg = EmailMessage()
 
-                msg['Subject'] = subject if subject else messages.line_subject()
+                msg['Subject'] = title_subject if title_subject else messages.line_subject()
                 msg['From'] = sender_email
                 msg['To'] = senator_email
 
