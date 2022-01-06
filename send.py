@@ -2,29 +2,14 @@ import senators, smtplib, messages, ssl, states, sys, time
 from email.message import EmailMessage
 from getpass import getpass
 
-def print_success():
+def boundary():
     print("==================================================================")
 
-def login():
-    print_success()
-    sender_name = ""
-    while True:
-        if not sender_name:
-            sender_name = input("Type in your name then press enter: ")
-        else:
-            break
-    email = input("Type in your gmail then press enter: ")
-    password = getpass("Type in your password then press enter: ")
-    print_success()
-    return sender_name, email, password
-
-
-
 def prepare_email():
-    print_success()
+    boundary()
     print("\nWhat would you like the subject (title) of your email to be?\n")
     title_subject = input("Type here and press enter (if blank, the program will generate one for you): ")
-    print_success()
+    boundary()
     print("\nThis program creates unique and personalized emails to Senators.")
     print("However, if you would like to write your own message, please save it in a .txt file. The easiest way to do this is to just write your message in example.txt.\n")
     while True:
@@ -45,13 +30,27 @@ def prepare_email():
     return title_subject, message
 
 
+def login():
+    boundary()
+    sender_name = ""
+    while True:
+        if not sender_name:
+            sender_name = input("Type in your name then press enter: ")
+        else:
+            break
+    email = input("Type in your gmail then press enter: ")
+    password = getpass("Type in your password then press enter: ")
+    boundary()
+    return sender_name, email, password
+
+
 def select_recipients():
     receive = set()
     selected = set()
 
     # Choose a state
     while True:
-        print_success()
+        boundary()
         print("Select 0 to send your message to the state senators of your selected state")
         if selected: print(f'States chosen: {selected}\n')
         state_options = { v:k for v,k in enumerate(senators.get_states()) }
@@ -60,7 +59,7 @@ def select_recipients():
         print("Enter blank (nothing) when done.")
         
         state_idx = input("\nType the number corresponding to the state here: ")
-        print_success()
+        boundary()
         # Blank -> Done
         if not state_idx:
             break
@@ -75,7 +74,7 @@ def select_recipients():
         # Choose a senator
             while True:
                 city_options = { v:k for v,k in enumerate(senators.get_cities(state)) }
-                print_success()
+                boundary()
                 print("Which officials do you want to send emails to?")
                 if subcart: print(f'Cities chosen: {subcart}\n')
                 for idx, opt in city_options.items():
@@ -97,10 +96,10 @@ def select_recipients():
                     print("Invalid index")
             for city in subcart:
                 selected.add("%s, %s" % (city, states.abbreviate(state)))
-            print_success()
+            boundary()
         else:
             print("Invalid index")
-    print_success()
+    boundary()
 
     if not receive:
         sys.exit("ABORT: no recipients selected.")
@@ -149,6 +148,6 @@ while True:
         print("Unexpected error... trying again in 10 seconds.")
         time.sleep(10)
 
-print_success()
+boundary()
 print(f'\nSuccessfully sent {send} emails!\n')
-print_success()
+boundary()
