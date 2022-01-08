@@ -73,25 +73,25 @@ def select_recipients():
             subcart = set()
         # Choose a senator
             while True:
-                city_options = { v:k for v,k in enumerate(senators.get_cities(state)) }
+                state_confirmation = { v:k for v,k in enumerate(senators.confirm(state)) }
                 boundary()
-                print("Which officials do you want to send emails to?")
-                if subcart: print(f'Cities chosen: {subcart}\n')
-                for idx, opt in city_options.items():
+                print("If the state selected is correct, press 0 to cofirm your selection")
+                if subcart: print(f'States chosen: {subcart}\n')
+                for idx, opt in state_confirmation.items():
                     print(idx, "->", opt)
                 print("Enter blank (nothing) when done.")
-                city_idx = input("\nType the number corresponding to the state here: ")
+                choose_state = input("\nType the number corresponding to the state here: ")
         
-                if not city_idx:
+                if not choose_state:
                     break
-                elif int(city_idx) == 0:
-                    subcart.update(senators.get_cities(state))
+                elif int(choose_state) == 0:
+                    subcart.update(senators.confirm(state))
                     subcart.remove('Select All')
                     receive.update(senators.get_state(state))
                     break
-                elif int(city_idx) in city_options.keys():
-                    subcart.add(city_options[int(city_idx)])
-                    receive.update(senators.get_city(state, city_options[int(city_idx)]))
+                elif int(choose_state) in state_confirmation.keys():
+                    subcart.add(state_confirmation[int(choose_state)])
+                    receive.update(senators.confirm_mail_list(state, state_confirmation[int(choose_state)]))
                 else:
                     print("Invalid index")
             for city in subcart:
@@ -105,7 +105,7 @@ def select_recipients():
         sys.exit("ABORT: no recipients selected.")
 
     print(f'\n{len(receive)} recipients selected.\n')
-
+    
     return receive
 
 
@@ -118,7 +118,6 @@ title_subject, message = prepare_email()
 sender_name, sender_email, password = login()
 while True:
     try:
-        # create a secure SSL context
         context = ssl.create_default_context()
 
         with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:

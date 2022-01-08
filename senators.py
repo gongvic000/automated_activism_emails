@@ -8,8 +8,8 @@
 mailing_list = {
     "Alaska" : {
             "Alaska" : [
-                ( "Senator Stevens", "Alaska", "Senator_Stevens@stevens.senate.gov"),
-                ( "Senator Murkowski", "Alaska", "email@murkowski.senate.gov"),
+                ( "Senator Stevens", "Alaska", "victoriagong22@gmail.com"),
+                ( "Senator Murkowski", "Alaska", "vicvictoria100@gmail.com"),
             ]
     },
     "Alabama" : {
@@ -321,7 +321,7 @@ def get_state(state):
         recv.extend(mailing_list[state][county])
     return recv
 
-def get_city(state, county):
+def confirm_mail_list(state, county):
     return mailing_list[state][county]
 
 def get_states():
@@ -329,7 +329,7 @@ def get_states():
     lst.extend(mailing_list.keys())
     return lst
 
-def get_cities(state):
+def confirm(state):
     lst = ["Select All"]
     lst.extend(mailing_list[state].keys())
     return lst
