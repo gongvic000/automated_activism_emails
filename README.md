@@ -2,7 +2,7 @@
 
 In light the of China's treatment towards Uyghur Muslim, it is imperative that we push more more than a diplomatic boycott, but genuine intervention. 
 
-The script sends a **unique message to each lawmaker** by varying sentence structures and switching out nouns, verbs, adverbs, and adjectives with synonyms. 
+The script sends a **unique message** to our 100 US Senators with varying sentences by using differed phrases. 
 
 **This script only works for gmail accounts.** 
 
@@ -21,7 +21,6 @@ The script sends a **unique message to each lawmaker** by varying sentence struc
 	
 
 ## Running the script
-Shoutout to Darry for helping me set this up!
 1. Install docker-engine
 2. [Mac or Windows](https://docs.docker.com/engine/install/) (Catalina, Mojave, or High Sierra; Windows 10 Pro, Enterprise, or Education)
 3. Run application: `python send.py`
