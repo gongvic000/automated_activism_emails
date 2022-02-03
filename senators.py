@@ -8,8 +8,8 @@
 mailing_list = {
     "Alaska" : {
             "Alaska" : [
-                ( "Senator Stevens", "Alaska", "victoriagong22@gmail.com"),
-                ( "Senator Murkowski", "Alaska", "vicvictoria100@gmail.com"),
+                ( "Senator Stevens", "Alaska", "senator@setevens.ssenate.gov"),
+                ( "Senator Murkowski", "Alaska", "senatormurkowski@semurkowski.senate.gov"),
             ]
     },
     "Alabama" : {
